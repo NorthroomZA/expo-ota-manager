@@ -30,7 +30,7 @@
     }
   },
   "repository": "https://github.com/NorthroomZA/expo-ota-manager.git",
-  "author": "tom@themorrow.digital",
+  "author": "tom@themorrow.digital, andrew@northroom.digital",
   "license": "MIT",
   "peerDependencies": {
     "expo-updates": "~0.16.4",
