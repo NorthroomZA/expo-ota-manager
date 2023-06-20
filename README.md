@@ -4,12 +4,6 @@
   <img alt="Expo OTA manager" width="150" src="expo-ota-manager.svg">
 </p>
 <p align="center">
-  <a href="https://themorrow.digital/">
-    <img alt="Morrow" width="200" src="love-morrow.png">
-  </a>
-</p>
-
-<p align="center">
     <a href="https://www.npmjs.com/package/expo-ota-manager" alt="npm">
         <img src="https://img.shields.io/npm/v/expo-ota-manager" />
     </a>
