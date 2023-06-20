@@ -1,30 +1,55 @@
 {
   "name": "expo-ota-manager",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A helper plugin to manage Over-The-Air updates when your app is running",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint --ext .ts,.tsx .",
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "release": "standard-version --no-verify"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
   },
   "repository": "https://github.com/NorthroomZA/expo-ota-manager.git",
   "author": "tom@themorrow.digital",
   "license": "MIT",
   "peerDependencies": {
+    "expo-updates": "~0.16.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.71.7",
-    "expo-updates": "~0.16.4"
+    "react-native": "0.71.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@types/react-native": "^0.72.2",
     "babel-preset-expo": "^8.2.3",
     "eslint": "^7.6.0",
+    "expo-updates": "~0.16.4",
+    "husky": "^8.0.3",
+    "react-native": "0.71.7",
     "rollup": "^2.23.1",
     "rollup-plugin-typescript2": "^0.27.2",
-    "typescript": "^3.9.7",
-    "@types/react-native": "^0.72.2",
-    "react-native": "0.71.7",
-    "expo-updates": "~0.16.4"
+    "standard-version": "^9.5.0",
+    "typescript": "^3.9.7"
   }
 }
