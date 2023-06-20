@@ -23,7 +23,7 @@
     "rollup": "^2.23.1",
     "rollup-plugin-typescript2": "^0.27.2",
     "typescript": "^3.9.7",
-    "@types/react-native": "^0.63.7",
+    "@types/react-native": "^0.72.2",
     "react-native": "0.71.7",
     "expo-updates": "~0.16.4"
   }
