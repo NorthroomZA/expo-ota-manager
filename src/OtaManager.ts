@@ -13,10 +13,13 @@ export const showConfirmAlert = async (
       title,
       message,
       [
-        { text: confirmText, onPress: () => resolve(true) },
+        { text: confirmText, isPreferred:true, onPress: () => resolve(true) },
         { text: cancelText, onPress: () => resolve(false), style: "cancel" },
       ],
-      { onDismiss: () => resolve(false) }
+      { 
+        onDismiss: () => resolve(false),
+        cancelable:false 
+      }
     );
   });
 
@@ -29,10 +32,10 @@ export default class OtaManager {
     const hourInMS = 1000 * 60 * 60;
 
     const defaultOptions: IOptions = {
-      noButtonText: "Not now",
+      noButtonText: "Later",
       yesButtonText: "Restart",
-      textLines: ["An update is ready", "Restart your app to start using it"],
-      titleText: "New Version",
+      textLines: ["A new update is available.", "Restart your app to start using it"],
+      titleText: "New App Update",
       repromptIntervalMs: hourInMS,
       foregroundCheckIntervalMs: 0,
     };
